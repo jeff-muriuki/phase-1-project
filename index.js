@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const booksContainer= document.getElementById('book-container')
+   
     let likes=0
     let allBooks= []
+
    
     
      fetch('https://potterapi-fedeperin.vercel.app/en/books')
@@ -118,28 +120,13 @@ commentsForm.appendChild(submitBtn)
 
     commentInput.value=''
     })
-    const markAsRead= document.createElement('div')
-    markAsRead.id= 'mark-as-read'
-
-    const markAsReadCheckbox= document.createElement('input')
-    markAsReadCheckbox.type= 'checkbox'
-
-    const markAsReadLabel= document.createElement('label')
-    markAsReadLabel.textContent= 'mark as read'
-    markAsRead.appendChild(markAsReadLabel)
-    markAsReadCheckbox.addEventListener('change', function () {
-        bookCard.toggle('read', markAsRead.checked)
-    })
-    markAsRead.appendChild(markAsReadCheckbox)
-
     
-    bookCard.appendChild(markAsRead)
 return bookCard
 }
 
 document.getElementById('search-button').addEventListener('click', function () {
     const searchInput = document.getElementById('search-input').value.trim().toLowerCase();
-    const filteredBooks = allBooks.filter(book => book.title.toLowerCase().includes(searchInput));
+    const filteredBooks = allBooks.filter(book => book.title.toLowerCase().includes(searchInput))
     displayBooks(filteredBooks);
 });
 
