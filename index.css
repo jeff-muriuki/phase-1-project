@@ -1,0 +1,53 @@
+#book-container {
+   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.book-card{
+    background-color: antiquewhite;
+    padding: 10px;
+}
+.like-btn {
+    background-color: transparent;
+    border-style: none;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    
+}
+#search-input {
+    width: 400px;
+    height: 30px;
+}    
+#search-button {
+    height: 35px;
+}
+h1 {
+    height: 50px;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #FFFFFF;
+    padding-left: 50px;
+    padding-top: 15px;
+  }
+#header {
+    background-color: #333333;
+    
+}
+body {
+    background-color: #E1DCC5;
+}
+#mark-as-read {
+    
+    padding-top: 10px;
+}
+#description {
+    font-style: italic;    
+
+}
